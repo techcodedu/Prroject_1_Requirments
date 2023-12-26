@@ -10,7 +10,12 @@
 2. **Create `flaskapp` Directory and Subdirectories**:
    - Inside VSCode, create a new directory named `flaskapp`.
    - Inside `flaskapp`, create three subdirectories: `templates`, `static`, and within `static`, create `css`, `js`, and `images`.
-
+   - 
+3. **Download and Set Up Bootstrap**:
+   - Download Bootstrap from [getbootstrap.com](https://getbootstrap.com/docs/5.3/getting-started/download/).
+   - Extract the downloaded file.
+   - Copy `bootstrap.min.css` into the `css` folder and `bootstrap.bundle.min.js` into the `js` folder within the `static` directory.
+     
 ## 3.2 Establishing Database Connections
 
 ### Creating `__init__.py`
