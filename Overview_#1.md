@@ -16,7 +16,7 @@
    - 3.1. Setting up Flask Application Structure
    - 3.2. Establishing Database Connections
    - 3.3. Implementing Routes and Views for Product Display
-   - 3.4. Designing the Product Layout with Bootstrap (Four Columns Per Row) and 1 row in mobile layout
+   - 3.4. Designing the Product Layout with Bootstrap (Four Columns Per Row in desktop view) and stack columns in mobile layout
 
 4. **Interactive Product Selection and Order Building**
    - 4.1. Designing the Product Catalog Interface
