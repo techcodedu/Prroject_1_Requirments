@@ -41,7 +41,7 @@
    - Write a test route to check the database connection.
 
    ```python
-   from app import app, mysql
+   from flaskapp import app, mysql
    from flask import jsonify
 
    @app.route('/testconnection')
@@ -63,7 +63,7 @@
    - This file will be used to run the Flask application.
 
    ```python
-   from app import app
+   from flaskapp import app
 
    if __name__ == "__main__":
        app.run(debug=True)
@@ -132,7 +132,7 @@
    - Implement the route for the main page.
 
    ```python
-   from app import app
+   from flaskapp import app
    from flask import render_template
 
    @app.route('/')
