@@ -5,8 +5,9 @@ Ensure you have an internet connection for this setup, as you'll need to downloa
 ## Step 1: Installing Python
 Python is essential for our project. Let's get it set up:
 
-1. **Download Python**:
+1. **Download Python and XAMPP server**:
    - Go to [python.org](https://www.python.org/downloads/) and download the version appropriate for your OS.
+   - Go to [xampp](https://www.apachefriends.org/) and download the version appropriate for your OS.
    - Choose the installer specific to your operating system (Windows).
 
 2. **Install Python**:
