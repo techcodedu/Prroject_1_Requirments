@@ -55,7 +55,7 @@ Now, we'll install the necessary packages for our Flask app.
      ```
    - MySQL connector for database interactions:
      ```
-     pip install mysql-connector-python
+     pip install flask-mysqldb
      ```
 
 ## Step 5: Creating a `requirements.txt` File
