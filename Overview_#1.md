@@ -39,3 +39,5 @@
    - 7.3. Final Checks and Adjustments
 
 This structured approach provides a comprehensive guide for the step-by-step development of the "MKNR Palengke Kiosk" application, from initial setup to final testing and adjustments.
+
+[🎥 **Watch the Video here for Using the GitHub Guide Documentation Here**](https://www.example.com/video-tutorial)
