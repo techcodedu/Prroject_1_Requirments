@@ -59,7 +59,7 @@
    - Once confirmed, you can remove the test route.
 
 4 . **Create `run.py`**:
-   - In the root of your `flaskapp` directory, create a `run.py` file.
+   - In the root of your `yourproject folder` directory, create a `run.py` file.
    - This file will be used to run the Flask application.
 
    ```python
