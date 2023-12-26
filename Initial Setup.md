@@ -10,7 +10,7 @@ Python is essential for our project. Let's get it set up:
    - Go to [xampp](https://www.apachefriends.org/) and download the version appropriate for your OS.
    - Choose the installer specific to your operating system (Windows).
 
-2. **Install Python**:
+2. **Install Python and xampp**:
    - Run the downloaded installer.
    - Follow the on-screen instructions to complete the installation.
 
