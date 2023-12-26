@@ -1,4 +1,4 @@
-# Initial Setup Guide for Kiosk Project
+# Initial Setup Guide 
 
 Ensure you have an internet connection for this setup, as you'll need to download software and dependencies.
 
