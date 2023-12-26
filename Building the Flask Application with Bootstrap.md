@@ -58,6 +58,24 @@
    - Run your Flask app and navigate to `/testconnection` to check the database connection.
    - Once confirmed, you can remove the test route.
 
+4 . **Create `run.py`**:
+   - In the root of your `flaskapp` directory, create a `run.py` file.
+   - This file will be used to run the Flask application.
+
+   ```python
+   from app import app
+
+   if __name__ == "__main__":
+       app.run(debug=True)
+   ```
+
+5. **Run the Flask App**:
+   - Run the application using the command:
+     ```
+     python run.py
+     ```
+   - The application should now be running on `localhost` at http://127.0.0.1:5000
+   - 
 ## 3.3 Implementing Routes and Views for Product Display
 
 ### Creating `layout.html`
@@ -122,24 +140,11 @@
    def index():
        return render_template('index.html')
    ```
-
-## 3.4 Creating `run.py` to Run the Application
-
-1. **Create `run.py`**:
-   - In the root of your `flaskapp` directory, create a `run.py` file.
-   - This file will be used to run the Flask application.
-
-   ```python
-   from app import app
-
-   if __name__ == "__main__":
-       app.run(debug=True)
-   ```
-
-2. **Run the Flask App**:
-   - Use the terminal to navigate to the `flaskapp` directory.
+4. **Run the Flask App again**:
    - Run the application using the command:
      ```
      python run.py
      ```
    - The application should now be running on `localhost` at http://127.0.0.1:5000
+
+
