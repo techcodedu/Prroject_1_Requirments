@@ -68,14 +68,13 @@
    if __name__ == "__main__":
        app.run(debug=True)
    ```
-
 5. **Run the Flask App**:
    - Run the application using the command:
      ```
      python run.py
      ```
    - The application should now be running on `localhost` at http://127.0.0.1:5000
-   - 
+     
 ## 3.3 Implementing Routes and Views for Product Display
 
 ### Creating `layout.html`
