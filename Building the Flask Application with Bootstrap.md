@@ -22,16 +22,20 @@
    ```python
    from flask import Flask
    from flask_mysqldb import MySQL
-
+   
    app = Flask(__name__)
-
-   # Database Configuration
+   
+   # Database connection
    app.config['MYSQL_HOST'] = 'localhost'
    app.config['MYSQL_USER'] = 'root'
    app.config['MYSQL_PASSWORD'] = ''
-   app.config['MYSQL_DB'] = 'yourname_kiosk'
-
+   app.config['MYSQL_DB'] = 'chester_kiosk'
+   
    mysql = MySQL(app)
+   
+   # Import routes
+   from flaskapp import routes
+
    ```
 
 ### Creating `routes.py`
@@ -43,7 +47,7 @@
    ```python
    from flaskapp import app, mysql
    from flask import jsonify
-
+   
    @app.route('/testconnection')
    def test_connection():
        try:
@@ -52,16 +56,16 @@
            return jsonify({"status": "Connected to the database"})
        except Exception as e:
            return jsonify({"status": "Connection failed", "error": str(e)})
+
    ```
 
 3. **Run the App to Test Connection**:
-   - Run your Flask app and navigate to `/testconnection` to check the database connection.
-   - Once confirmed, you can remove the test route.
 
 4 . **Create `run.py`**:
    - In the root of your `yourproject folder` directory, create a `run.py` file.
    - This file will be used to run the Flask application.
-
+   - Run your Flask app and navigate to `/testconnection` to check the database connection.
+   - Once confirmed, you can remove the test route.
    ```python
    from flaskapp import app
 
