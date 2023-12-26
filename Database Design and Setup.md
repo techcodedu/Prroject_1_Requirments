@@ -58,3 +58,4 @@ Let's use phpMyAdmin to create the database and tables.
    - Copy and paste the SQL schema provided above into the SQL tab.
    - Execute the script to create the `yourname_kiosk` database and its tables.
 
+[🎥 **Watch the Database Design and Setup Video Tutorial Here**](https://www.example.com/video-tutorial)
