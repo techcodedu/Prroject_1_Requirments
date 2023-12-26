@@ -60,7 +60,9 @@
 
 ## 3.3 Implementing Routes and Views for Product Display
 
-1. **Creating `layout.html`**:
+### Creating `layout.html`
+
+1. **Create `layout.html`**:
    - In the `templates` directory of `flaskapp`, create a `layout.html` file.
    - This file will include the basic HTML structure with links to Bootstrap CSS and JS.
 
@@ -73,7 +75,6 @@
        <title>MKNR Palengke Kiosk</title>
        <!-- Bootstrap CSS Link -->
        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-       <!-- Other Meta Tags and CSS Links -->
    </head>
    <body>
        <header>
@@ -90,12 +91,13 @@
 
        <!-- Bootstrap JS Link -->
        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-       <!-- Other JS Scripts -->
    </body>
    </html>
    ```
 
-2. **Creating `index.html`**:
+### Creating `index.html`
+
+2. **Create `index.html`**:
    - Extend `layout.html` in `index.html` to display the products.
 
    ```html
@@ -107,8 +109,10 @@
    {% endblock %}
    ```
 
-3. **Implementing the Index Route**:
-   - Update `routes.py` in `flaskapp` to include the route for the main page.
+### Implementing the Index Route in `routes.py`
+
+3. **Update `routes.py`**:
+   - Implement the route for the main page.
 
    ```python
    from app import app
@@ -118,3 +122,24 @@
    def index():
        return render_template('index.html')
    ```
+
+## 3.4 Creating `run.py` to Run the Application
+
+1. **Create `run.py`**:
+   - In the root of your `flaskapp` directory, create a `run.py` file.
+   - This file will be used to run the Flask application.
+
+   ```python
+   from app import app
+
+   if __name__ == "__main__":
+       app.run(debug=True)
+   ```
+
+2. **Run the Flask App**:
+   - Use the terminal to navigate to the `flaskapp` directory.
+   - Run the application using the command:
+     ```
+     python run.py
+     ```
+   - The application should now be running on `localhost` at http://127.0.0.1:5000
