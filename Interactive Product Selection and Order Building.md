@@ -44,7 +44,7 @@
                     <button type="button" class="btn btn-primary add-item" onclick="addItemToCart('{{ product[3] }}')">Add Item</button>
                     <button type="button" class="btn btn-secondary order-item" data-bs-toggle="modal" data-bs-target="#orderModal"
                         data-name="{{ product[1] }}" data-price="{{ product[3] }}" data-unit="{{ product[2] }}"
-                        onclick="setupModal(this)">Order Item</button>
+                        data-image="{{ url_for('static', filename=product[4]) }}" onclick="setupModal(this)">Order Item</button>
 
                 </div>
             </div>
