@@ -5,8 +5,7 @@
 - **Details**: Price (in pesos), unit (kg/pack/piece), product name, photo.
 - **Responsive Layout**: Four products per row on desktop, one per row on mobile.
 
-## 2. Interactive Product Selection and Order Building
-- **Quantity Adjustment**: "+/-" buttons for each product to set the quantity.
+## 2. Interactive Product Selection and Order Building.
 - **Add Item**: Adds the product to the order and updates total price, displayed on the page.
 
 ## 3. Finalizing and Reviewing Orders
