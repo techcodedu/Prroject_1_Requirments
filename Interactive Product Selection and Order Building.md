@@ -41,11 +41,11 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product[1]}}</h5>
                     <p class="card-text">Price: {{ product[3] }} per {{ product.unit }}</p>
-                    <button type="button" class="btn btn-primary add-item" data-price="{{ product[3]}}">Add
-                        Item</button>
-                    <button type="button" class="btn btn-secondary order-item" data-bs-toggle="modal"
-                        data-bs-target="#orderModal" data-name="{{ product[1] }}"
-                        data-price="{{ product[3] }}" data-unit="{{ product[2] }}">Order Item</button>
+                    <button type="button" class="btn btn-primary add-item" onclick="addItemToCart('{{ product[3] }}')">Add Item</button>
+                    <button type="button" class="btn btn-secondary order-item" data-bs-toggle="modal" data-bs-target="#orderModal"
+                        data-name="{{ product[1] }}" data-price="{{ product[3] }}" data-unit="{{ product[2] }}"
+                        onclick="setupModal(this)">Order Item</button>
+
                 </div>
             </div>
         </div>
@@ -67,19 +67,17 @@
 
 ```javascript
 // Inside script.js
-document.addEventListener("DOMContentLoaded", function() {
-    let totalCost = 0;
+let totalCost = 0;
+
+function updateTotalCostDisplay() {
     const totalCostDisplay = document.getElementById('totalCost');
+    totalCostDisplay.innerText = totalCost.toFixed(2);
+}
 
-    const updateTotalCost = (additionalCost) => {
-        totalCost += additionalCost;
-        totalCostDisplay.innerText = totalCost.toFixed(2);
-    };
-
-    document.querySelectorAll('.add-item').forEach(button => {
-        button.addEventListener('click', () => updateTotalCost(parseFloat(button.dataset.price)));
-    });
-});
+function addItemToCart(price) {
+    totalCost += parseFloat(price);
+    updateTotalCostDisplay();
+}
 
 ```
 
