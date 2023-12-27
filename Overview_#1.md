@@ -20,8 +20,8 @@
 
 4. **Interactive Product Selection and Order Building**
    - 4.1. Designing the Product Catalog Interface
-   - 4.2. Implementing "+/-" Buttons for Quantity Adjustment
-   - 4.3. Adding "Add Item" Button Functionality
+   - 4.2. Adding "Add Item" Button Functionality
+   - 4.3. Implementing the image to pass in a modal
 
 5. **Finalizing and Reviewing Orders**
    - 5.1. Creating the "Order Now" Button and Modal
