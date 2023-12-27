@@ -155,4 +155,5 @@
      ```
    - The application should now be running on `localhost` at http://127.0.0.1:5000
 
+[🎥 **Watch the Building the Flask Application with Bootstrap Video Tutorial Here**](https://www.example.com/video-tutorial)
 
