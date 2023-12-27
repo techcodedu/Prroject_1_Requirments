@@ -32,67 +32,55 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<div class="container mt-4">
     <div class="row">
         {% for product in products %}
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text">{{ product.price_per_unit }} per {{ product.unit }}</p>
-                        <!-- Quantity Adjustment Buttons -->
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary decrease">-</button>
-                            <span class="quantity">1</span>
-                            <button type="button" class="btn btn-sm btn-outline-secondary increase">+</button>
-                        </div>
-                        <!-- Add Item Button -->
-                        <button type="button" class="btn btn-primary add-item">Add Item</button>
-                    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+            <div class="card h-100">
+                <img src="{{url_for('static',filename = product[4])}}" class="card-img-top product-image" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product[1]}}</h5>
+                    <p class="card-text">Price: {{ product[3] }} per {{ product.unit }}</p>
+                    <button type="button" class="btn btn-primary add-item" data-price="{{ product[3]}}">Add
+                        Item</button>
+                    <button type="button" class="btn btn-secondary order-item" data-bs-toggle="modal"
+                        data-bs-target="#orderModal" data-name="{{ product[1] }}"
+                        data-price="{{ product[3] }}" data-unit="{{ product[2] }}">Order Item</button>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
-    <!-- Order Now Button -->
-    <button id="orderNowButton" class="btn btn-success mt-3">Order Now</button>
+    <!-- Total Cost Display -->
+    <div class="text-end mt-4">
+        <h3>Total Cost: <span id="totalCost">0</span> Pesos</h3>
+    </div>
+</div>
 {% endblock %}
 ```
-
-## 4.2 Implementing "+/-" Buttons for Quantity Adjustment
+## 4.2 Implementing the Add Item Functionality
 
 ### Create and Link `script.js` for Interactivity
 
 1. **Write `script.js`**:
-   - Implement JavaScript to handle the "+/-" buttons for quantity adjustment.
+   - Implement JavaScript to handle the Add Item buttons for the total accumulated price.
 
 ```javascript
 // Inside script.js
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.decrease, .increase').forEach(button => {
-        button.addEventListener('click', function() {
-            let quantityElement = this.parentNode.querySelector('.quantity');
-            let quantity = parseInt(quantityElement.innerText);
-            if (this.classList.contains('increase')) {
-                quantity++;
-            } else if (quantity > 1) {
-                quantity--;
-            }
-            quantityElement.innerText = quantity;
-        });
-    });
+    let totalCost = 0;
+    const totalCostDisplay = document.getElementById('totalCost');
+
+    const updateTotalCost = (additionalCost) => {
+        totalCost += additionalCost;
+        totalCostDisplay.innerText = totalCost.toFixed(2);
+    };
 
     document.querySelectorAll('.add-item').forEach(button => {
-        button.addEventListener('click', function() {
-            // Logic to add item to cart (to be implemented)
-            console.log('Item added to cart');
-        });
-    });
-
-    document.querySelector('#orderNowButton').addEventListener('click', function() {
-        // Logic to show order summary modal (to be implemented)
-        console.log('Show order summary');
+        button.addEventListener('click', () => updateTotalCost(parseFloat(button.dataset.price)));
     });
 });
+
 ```
 
 2. **Include `script.js` in `index.html`**:
