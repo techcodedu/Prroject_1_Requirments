@@ -1,9 +1,9 @@
 # Step 2: Database Design and Setup
 
 Ensure that XAMPP has been installed on your machine before proceeding, and design the MySQL database for our Flask application.
-Certainly! Here's the revised version of the Entity-Relationship Diagram (ERD) for your database with the relationships section updated as requested, in Markdown format:
 
-```markdown
+
+```
 ## Entity-Relationship Diagram (ERD) - Text Representation
 
 ### Entities
