@@ -1,7 +1,68 @@
 # Step 2: Database Design and Setup
 
 Ensure that XAMPP has been installed on your machine before proceeding, and design the MySQL database for our Flask application.
+Certainly! Here's the revised version of the Entity-Relationship Diagram (ERD) for your database with the relationships section updated as requested, in Markdown format:
 
+```markdown
+## Entity-Relationship Diagram (ERD) - Text Representation
+
+### Entities
+1. **Products**
+   - `product_id` (PK)
+   - `name`
+   - `unit`
+   - `price_per_unit`
+   - `image_url`
+
+2. **Orders**
+   - `order_id` (PK)
+   - `total_price`
+   - `date_time`
+   - `customer_contact`
+
+3. **Order Items**
+   - `order_item_id` (PK)
+   - `order_id` (FK to Orders)
+   - `product_id` (FK to Products)
+   - `quantity`
+   - `price`
+
+### Relationships
+- **Products to Order Items**
+  - One (Product) to Many (Order Items)
+  - A single product can appear in multiple order items.
+
+- **Orders to Order Items**
+  - One (Order) to Many (Order Items)
+  - A single order can include multiple order items.
+
+### ERD Diagram
+
+```plaintext
++--------------------------------+      +--------------------------------+
+|            Products            |      |           Order Items          |
++--------------------------------+      +--------------------------------+
+| product_id (PK)                |1    | product_id (FK to Products)    |M
+| name                           |<-----| order_id (FK to Orders)        |
+| unit                           |      | order_item_id (PK)             |
+| price_per_unit                 |      | quantity                       |
+| image_url                      |      | price                          |
++--------------------------------+      +--------------------------------+
+                                             |
+                                             |1
+                                             |
+                                             v
+                                     +-------------------------+
+                                     |          Orders         |
+                                     +-------------------------+
+                                     | order_id (PK)           |M
+                                     | total_price             |
+                                     | date_time               |
+                                     | customer_contact        |
+                                     +-------------------------+
+```
+
+This format includes a clear definition of the relationships between the entities, highlighting the one-to-many nature of the connections between `Products` and `Order Items`, and `Orders` and `Order Items`.
 ## 2.1 Designing the SQL Schema
 We will define the schema for our database, which includes creating the database and tables for products, orders, and order items.
 
