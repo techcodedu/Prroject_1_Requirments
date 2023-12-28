@@ -1,6 +1,6 @@
 # Step 2: Database Design and Setup
 
-Now that XAMPP is installed, we'll proceed to set up and design the MySQL database for our Flask application.
+Ensure that XAMPP has been installed on your machine before proceeding, and design the MySQL database for our Flask application.
 
 ## 2.1 Designing the SQL Schema
 We will define the schema for our database, which includes creating the database and tables for products, orders, and order items.
