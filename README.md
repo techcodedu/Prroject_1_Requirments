@@ -1,5 +1,5 @@
 
-# MKNR Palengke Kiosk Project - System Features Summary
+# Kiosk Project - System Features Summary
 
 ## 1. Product Display
 - **Details**: Price (in pesos), unit (kg/pack/piece), product name, photo.
