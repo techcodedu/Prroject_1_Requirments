@@ -184,3 +184,4 @@
         </nav>
     </header>
 ```
+[🎥 **Building the Flask Application with Bootstrap (Adding Navigation to our Layout ) Part 6**](http://tinyurl.com/hmf2cuvf)
