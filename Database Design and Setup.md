@@ -64,6 +64,7 @@ Ensure that XAMPP has been installed on your machine before proceeding, and desi
 
 ```
 [🎥 **Watch the Database design and Setup Part 1 Here**](http://tinyurl.com/bdswtt8n)
+
 This format includes a clear definition of the relationships between the entities, highlighting the one-to-many nature of the connections between `Products` and `Order Items`, and `Orders` and `Order Items`.
 ## 2.1 Designing the SQL Schema
 We will define the schema for our database, which includes creating the database and tables for products, orders, and order items.
