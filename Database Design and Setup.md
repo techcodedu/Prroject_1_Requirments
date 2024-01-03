@@ -60,12 +60,18 @@ Ensure that XAMPP has been installed on your machine before proceeding, and desi
                                      | date_time               |
                                      | customer_contact        |
                                      +-------------------------+
+
+[🎥 **Watch the Database design and Setup Part 1 Here**](http://tinyurl.com/bdswtt8n)
 ```
 
 This format includes a clear definition of the relationships between the entities, highlighting the one-to-many nature of the connections between `Products` and `Order Items`, and `Orders` and `Order Items`.
 ## 2.1 Designing the SQL Schema
 We will define the schema for our database, which includes creating the database and tables for products, orders, and order items.
 
+[🎥 **Watch the Database design and Setup Part 2 Method # 1 Here**](http://tinyurl.com/4vnr4xe2)
+
+
+[🎥 **Watch the Database design and Setup Part 3 Method # 2 Here**](http://tinyurl.com/563yme7w)
 ### SQL Schema Creation:
 
 ```sql
@@ -119,4 +125,4 @@ Let's use phpMyAdmin to create the database and tables.
    - Copy and paste the SQL schema provided above into the SQL tab.
    - Execute the script to create the `yourname_kiosk` database and its tables.
 
-[🎥 **Watch the Database Design and Setup Video Tutorial Here**](https://www.example.com/video-tutorial)
+[🎥 **Watch the Database design and Setup Part 4 How to Insert Records **](http://tinyurl.com/269uvr7y)
