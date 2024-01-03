@@ -2,26 +2,6 @@
 
 ## 4.1 Designing the Product Catalog Interface
 
-### Update `layout.html` with Navigation Links
-
-1. **Enhance `layout.html` for Navigation**:
-   - Add navigation links for the product catalog and a placeholder for future orders page.
-
-```html
-<!-- Inside layout.html -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">MKNR Palengke Kiosk</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/orders">Orders</a> <!-- Placeholder -->
-            </div>
-        </div>
-    </nav>
-</header>
-```
-
 ### Implement Product Display and Image Modal in `index.html`
 
 2. **Set Up Product Grid in `index.html`**:
