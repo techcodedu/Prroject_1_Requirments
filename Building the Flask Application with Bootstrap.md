@@ -173,14 +173,14 @@
 ```html
 <!-- Inside layout.html -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">MKNR Palengke Kiosk</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/orders">Orders</a> <!-- Placeholder -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">MKNR Palengke Kiosk</a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/orders">Orders</a> <!-- Placeholder -->
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 ```
