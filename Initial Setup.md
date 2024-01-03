@@ -70,5 +70,5 @@ Keep track of all dependencies in one place.
 
 ---
 
-[🎥 **Watch the Initial Setup Video Tutorial Here**](http://tinyurl.com/bdswtt8n)
+[🎥 **Watch the Initial Setup Video Tutorial Here**](http://tinyurl.com/3bwn3x8f)
 
