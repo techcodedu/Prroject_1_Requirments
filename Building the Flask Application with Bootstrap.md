@@ -16,6 +16,8 @@
    - Extract the downloaded file.
    - Copy `bootstrap.min.css` into the `css` folder and `bootstrap.bundle.min.js` into the `js` folder within the `static` directory.
      
+[🎥 **Building the Flask Application with Bootstrap Part 1 (Project Structure)1 Here**](http://tinyurl.com/3352scrx)
+
 ## 3.2 Establishing Database Connections
 
 ### Creating `__init__.py`
@@ -42,6 +44,7 @@
    from flaskapp import routes
 
    ```
+[🎥 **Building the Flask Application with Bootstrap Part 2 (Database Connection) Here**](http://tinyurl.com/muf2hb82)
 
 ### Creating `routes.py`
 
@@ -83,7 +86,10 @@
      python run.py
      ```
    - The application should now be running on `localhost` at http://127.0.0.1:5000
-     
+
+
+[🎥 **Building the Flask Application with Bootstrap Part 3(Running and Testing routes for Connection) Here**](http://tinyurl.com/mwtdsd89)
+
 ## 3.3 Implementing Routes and Views for Product Display
 
 ### Creating `layout.html`
