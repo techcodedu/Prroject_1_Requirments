@@ -55,7 +55,17 @@
 </div>
 {% endblock %}
 ```
-
+### Code for displaying products
+```html
+   @app.route('/')
+   def index():
+       cursor = mysql.connection.cursor()
+       cursor.execute("SELECT * FROM products")  # Assuming 'products' is your table name
+       products = cursor.fetchall()
+       print(products)
+       cursor.close()
+       return render_template('index.html', products=products)
+```
 ### Implement JavaScript for Modal and Add Item Functionality
 
 3. **Update `script.js` for Modal and Add Item Functionality**:
