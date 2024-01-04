@@ -91,7 +91,7 @@ function showImageinModal(imageUrl) {
 }
 ```
 
-4. **Include `script.js` in `index.html`**:
+4. **Include `script.js` in `layout.html`**:
    - Ensure the JavaScript file is referenced at the end of `index.html`.
 
 ```html
