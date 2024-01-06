@@ -62,7 +62,8 @@ After successfully displaying the list of products on our "/" route, it's time t
    ```
 
 4. Save the file.
-5. Test the "Order Now" button. At this point, the modal should appear, but it won't have pre-populated data.
+5. Make sure to include the modal in your index.html
+6. Test the "Order Now" button. At this point, the modal should appear, but it won't have pre-populated data.
 
 ## Step 3: Update the script.js File
 
