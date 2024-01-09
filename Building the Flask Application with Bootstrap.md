@@ -9,7 +9,7 @@
 
 2. **Create `yourname_app` Directory and Subdirectories**:
    - Inside VSCode, create a new directory named `yourname_app`.
-   - Inside `yourname_app`, create three subdirectories: `templates`, `static`, and within `static`, create `css`, `js`, and `images`.
+   - Inside `yourname_app`, create two subdirectories: `templates`, `static`, and within `static`, and inside the static subdirectory create three subdirectories `css`, `js`, and `images`.
    - 
 3. **Download and Set Up Bootstrap**:
    - Download Bootstrap from [getbootstrap.com](https://getbootstrap.com/docs/5.3/getting-started/download/).
