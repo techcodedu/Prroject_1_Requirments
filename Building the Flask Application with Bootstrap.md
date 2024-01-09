@@ -7,8 +7,8 @@
    - Navigate to the root of your project folder.
    - Type `code .` to open the project in Visual Studio Code.
 
-2. **Create `flaskapp` Directory and Subdirectories**:
-   - Inside VSCode, create a new directory named `flaskapp`.
+2. **Create `yourname_app` Directory and Subdirectories**:
+   - Inside VSCode, create a new directory named `yourname_app`.
    - Inside `yourname_app`, create three subdirectories: `templates`, `static`, and within `static`, create `css`, `js`, and `images`.
    - 
 3. **Download and Set Up Bootstrap**:
@@ -23,7 +23,7 @@
 ### Creating `__init__.py`
 
 1. **Initialize Flask App and Database Connection**:
-   - In the `flaskapp` directory, create an `__init__.py` file.
+   - In the `yourname_app` directory, create an `__init__.py` file.
    - Set up your Flask app with MySQL configuration.
 
    ```python
@@ -41,7 +41,7 @@
    mysql = MySQL(app)
    
    # Import routes
-   from flaskapp import routes
+   from yourname_app import routes
 
    ```
 [🎥 **Building the Flask Application with Bootstrap Part 2 (Database Connection) Here**](http://tinyurl.com/muf2hb82)
@@ -49,11 +49,11 @@
 ### Creating `routes.py`
 
 2. **Test Database Connection**:
-   - In the `flaskapp` directory, create a `routes.py` file.
+   - In the `yourname_app` directory, create a `routes.py` file.
    - Write a test route to check the database connection.
 
    ```python
-   from flaskapp import app, mysql
+   from yourname_app import app, mysql
    from flask import jsonify
    
    @app.route('/testconnection')
@@ -75,7 +75,7 @@
    - Run your Flask app and navigate to `/testconnection` to check the database connection.
    - Once confirmed, you can remove the test route.
    ```python
-   from flaskapp import app
+   from yourname_app import app
 
    if __name__ == "__main__":
        app.run(debug=True)
@@ -95,7 +95,7 @@
 ### Creating `layout.html`
 
 1. **Create `layout.html`**:
-   - In the `templates` directory of `flaskapp`, create a `layout.html` file.
+   - In the `templates` directory of `yourname_app`, create a `layout.html` file.
    - This file will include the basic HTML structure with links to Bootstrap CSS and JS.
 
    ```html
@@ -147,7 +147,7 @@
    - Implement the route for the main page.
 
    ```python
-   from flaskapp import app
+   from yourname_app import app
    from flask import render_template
 
    @app.route('/')
