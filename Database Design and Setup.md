@@ -104,6 +104,10 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
+INSERT INTO `products` (`product_id`, `name`, `unit`, `price_per_unit`, `image_url`) VALUES
+(1, 'Cucumber', 'kg', 3.00, 'images/cucumber.jpg'),
+(2, 'Carrot', 'pc', 4.00, 'images/potato.jpg');
 ```
 
 ## 2.2 Starting MySQL Database with XAMPP
