@@ -1,7 +1,3 @@
-Certainly! Here's the revised content in proper Markdown format:
-
----
-
 # Step 5: Finalizing and Reviewing Orders
 
 Enhancing the user interface by adding an "Order Now" button after displaying the list of products.
