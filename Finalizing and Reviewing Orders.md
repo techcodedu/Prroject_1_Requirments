@@ -43,7 +43,7 @@ After successfully displaying the list of products on our "/" route, it's time t
                        </div>
                        <div class="mb-3">
                            <label for="quantity" class="form-label">Quantity</label>
-                           <input type="number" class="form-control" id="quantity" min="0.01" step="0.01" value="1">
+                           <input type="number" class="form-control" id="quantity"  min="1" step="1" value="1"">
                        </div>
                        <div class="mb-3">
                            <label for="totalPrice" class="form-label">Total Price</label>
@@ -83,8 +83,9 @@ After successfully displaying the list of products on our "/" route, it's time t
        productImage.src = button.dataset.image;
        const price = parseFloat(button.dataset.price);
        const unit = button.dataset.unit;
-       quantityInput.value = unit === 'kg' ? '1.0' : '1';
-       quantityInput.step = unit === 'kg' ? '0.01' : '1';
+       quantityInput.value = "1"; // Default value for both kg and pc
+       quantityInput.min = unit === "kg" ? "0.01" : "1"; // Minimum value based on unit
+       quantityInput.step = unit === "kg" ? "0.01" : "1"; // Step value based on unit
        totalPriceInput.value = price.toFixed(2);
 
        quantityInput.oninput = () => {
