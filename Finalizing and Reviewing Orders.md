@@ -8,9 +8,20 @@ Enhancing the user interface by adding an "Order Now" button after displaying th
 2. Locate the "Add Item" button.
 3. Directly below it, insert the following HTML code for the "Order Now" button:
    ```html
-   <button type="button" class="btn btn-secondary order-item" data-bs-toggle="modal" data-bs-target="#orderModal"
-           data-name="{{ product[1] }}" data-price="{{ product[3] }}" data-unit="{{ product[2] }}"
-           data-image="{{ url_for('static', filename=product[4]) }}" onclick="setupModal(this)">Order Item</button>
+   <button
+            type="button"
+            class="btn btn-secondary order-item"
+            data-bs-toggle="modal"
+            data-bs-target="#orderModal"
+            data-id="{{ product[0]}}"
+            data-name="{{ product[1] }}"
+            data-price="{{ product[3] }}"
+            data-unit="{{ product[2] }}"
+            data-image="{{ url_for('static', filename=product[4]) }}"
+            onclick="setupModal(this)"
+          >
+            Order Item
+          </button>
    ```
 4. Save the changes.
 5. Run the project to see the changes in the index or product page.
