@@ -63,10 +63,8 @@ def orders():
         o.total_price as order_total_price,
         p.name as product_name, 
         p.price_per_unit, 
-        p.unit, 
         p.image_url, 
-        oi.quantity, 
-        oi.price as item_price
+        oi.quantity
     FROM orders o
     JOIN order_items oi ON o.order_id = oi.order_id
     JOIN products p ON oi.product_id = p.product_id
@@ -74,7 +72,17 @@ def orders():
     cursor.execute(sql)
     orders_data = cursor.fetchall()
     cursor.close()
-    return render_template('orders.html', orders_data=orders_data)
+
+    formatted_orders_data = []
+    for order in orders_data:
+        # Format the order_date directly if it's already a datetime object
+        formatted_order_date = order[1].strftime('%B %d, %Y at %I:%M:%S %p')
+
+        # Reconstruct the order tuple with the formatted date
+        formatted_order = order[:1] + (formatted_order_date,) + order[2:]
+        formatted_orders_data.append(formatted_order)
+
+    return render_template('orders.html', orders_data=formatted_orders_data)
 ```
 
 ### Create `orders.html` in Templates
@@ -93,9 +101,6 @@ Now, create a new HTML file in the `templates` directory named `orders.html`. Ad
         <th scope="col">Order Total Price</th>
         <th scope="col">Product Name</th>
         <th scope="col">Quantity</th>
-        <th scope="col">Item Price</th>
-        <th scope="col">Price Per Unit</th>
-        <th scope="col">Unit</th>
         <th scope="col">Product Image</th>
       </tr>
     </thead>
@@ -107,13 +112,10 @@ Now, create a new HTML file in the `templates` directory named `orders.html`. Ad
         <td>{{ order[2] }}</td>
         <td>{{ order[3] }}</td>
         <td>{{ order[4] }}</td>
-        <td>{{ order[8] }}</td>
-        <td>{{ order[9] }}</td>
-        <td>{{ order[5] }}</td>
-        <td>{{ order[6] }}</td>
+        <td>{{ order[7] }}</td>
         <td>
           <img
-            src="{{ order[7] }}"
+            src="{{url_for('static',filename = order[6])}}"
             alt="Product Image"
             class="img-fluid"
             style="max-width: 100px"
@@ -125,6 +127,8 @@ Now, create a new HTML file in the `templates` directory named `orders.html`. Ad
   </table>
 </div>
 {% endblock %}
+
+
 ```
 
 Save and test all the functionalities of the project to ensure everything is working as expected.
