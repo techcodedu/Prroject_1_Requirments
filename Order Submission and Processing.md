@@ -33,7 +33,9 @@ def submit_order():
         # Commit the transaction
         mysql.connection.commit()
 
-        return jsonify(success=True), 200
+        #this line is to link to the alert of javascript
+        session['order_submitted'] = True
+        return redirect ("/")
     except Exception as e:
         # Rollback in case of error
         mysql.connection.rollback()
