@@ -44,6 +44,31 @@ def submit_order():
         # Close the cursor
         cursor.close()
 ```
+### Note** that we have addedd this line:
+
+```
+ session['order_submitted'] = True
+        return redirect ("/")
+```
+this line will redirect as in the product route again and will set a session 'order_submitted' to enable a notification for
+successful message later
+
+### Alerting Users of Successful Order Submission
+
+#### Update `index.html`
+
+In your `index.html` template, add the following JavaScript snippet to alert users of successful order submission. Place this snippet at the end of the file, right after closing `</div>` tag of the class
+"container":
+
+```html
+{% if session.pop('order_submitted', None) %}
+<script>
+  window.onload = function () {
+    alert("Order successfully saved.");
+  };
+</script>
+{% endif %}
+```
 
 Save the changes and test the functionality by applying for an order.
 
